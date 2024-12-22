@@ -1,0 +1,66 @@
+#btns-usertype::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -5px;
+    background-color: #000;
+}
+
+#btns-usertype.teacher::after {
+    animation: change_usertype_2 1s forwards;
+}
+
+#btns-usertype.student::after {
+    animation: change_usertype_1 1s forwards;
+}
+
+@keyframes change_usertype_1 {
+    0% {
+        width: 50%;
+        left: 0;
+    }
+
+    20% {
+        width: 50%;
+    }
+
+    50% {
+        width: 20%;
+        right: 50%;
+    }
+
+    75% {
+        width: 50%;
+    }
+
+    100% {
+        width: 50%;
+        right: 0;
+    }
+}
+
+@keyframes change_usertype_2 {
+    0% {
+        width: 50%;
+        right: 0;
+    }
+
+    20% {
+        width: 50%;
+    }
+
+    50% {
+        width: 20%;
+        left: 50%;
+    }
+
+    75% {
+        width: 50%;
+    }
+
+    100% {
+        width: 50%;
+        left: 0;
+    }
+}
